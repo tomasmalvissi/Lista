@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lista
+namespace ABMLista
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace Lista
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Lista());
+            Application.Run(new frm());
         }
     }
 }

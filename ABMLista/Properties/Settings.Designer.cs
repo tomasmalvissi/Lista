@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lista.Properties
+namespace ABMLista.Properties
 {
 
 
