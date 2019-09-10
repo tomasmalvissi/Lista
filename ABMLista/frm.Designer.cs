@@ -36,7 +36,7 @@
             this.txtNota = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnOCarga = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
             this.lblPorden = new System.Windows.Forms.Label();
             this.lblRepues = new System.Windows.Forms.Label();
             this.rbAlfab = new System.Windows.Forms.RadioButton();
@@ -119,15 +119,15 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "NOTA";
             // 
-            // btnOCarga
+            // btnListar
             // 
-            this.btnOCarga.Location = new System.Drawing.Point(460, 157);
-            this.btnOCarga.Name = "btnOCarga";
-            this.btnOCarga.Size = new System.Drawing.Size(75, 20);
-            this.btnOCarga.TabIndex = 9;
-            this.btnOCarga.Text = "Listar";
-            this.btnOCarga.UseVisualStyleBackColor = true;
-            this.btnOCarga.Click += new System.EventHandler(this.BtnOCarga_Click);
+            this.btnListar.Location = new System.Drawing.Point(460, 157);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(75, 20);
+            this.btnListar.TabIndex = 9;
+            this.btnListar.Text = "Listar";
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.BtnListar_Click);
             // 
             // lblPorden
             // 
@@ -160,7 +160,6 @@
             this.rbAlfab.TabStop = true;
             this.rbAlfab.Text = "Orden Alfabetico";
             this.rbAlfab.UseVisualStyleBackColor = true;
-            this.rbAlfab.CheckedChanged += new System.EventHandler(this.RbAlfab_CheckedChanged);
             // 
             // rbCarga
             // 
@@ -173,7 +172,6 @@
             this.rbCarga.TabStop = true;
             this.rbCarga.Text = "Orden de Carga";
             this.rbCarga.UseVisualStyleBackColor = true;
-            this.rbCarga.CheckedChanged += new System.EventHandler(this.RbCarga_CheckedChanged);
             // 
             // frm
             // 
@@ -186,7 +184,7 @@
             this.Controls.Add(this.rbAlfab);
             this.Controls.Add(this.lblRepues);
             this.Controls.Add(this.lblPorden);
-            this.Controls.Add(this.btnOCarga);
+            this.Controls.Add(this.btnListar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNota);
@@ -214,7 +212,7 @@
         private System.Windows.Forms.TextBox txtNota;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnOCarga;
+        private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Label lblPorden;
         private System.Windows.Forms.Label lblRepues;
         private System.Windows.Forms.RadioButton rbAlfab;

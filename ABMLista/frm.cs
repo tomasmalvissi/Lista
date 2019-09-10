@@ -69,22 +69,20 @@ namespace ABMLista
             lblRepues.Text = Resp;
         }
 
+       
+        private void BtnListar_Click(object sender, EventArgs e)
+        {
+            if (rbAlfab.Checked == true)
+            {
+                lblPorden.Text = Alumnos.OrdenAlfabetico();
+
+            }
+            else if (rbCarga.Checked == true)
+            {
+                lblPorden.Text = Alumnos.MostrarLista();
+            }
+        }
+
         #endregion
-
-
-        private void BtnOCarga_Click(object sender, EventArgs e)
-        {
-            lblPorden.Text = Alumnos.Listar();
-        }
-
-        private void RbAlfab_CheckedChanged(object sender, EventArgs e)
-        {
-            lblPorden.Text = Alumnos.OrdenAlfabetico();
-        }
-
-        private void RbCarga_CheckedChanged(object sender, EventArgs e)
-        {
-            
-        }
     }
 }

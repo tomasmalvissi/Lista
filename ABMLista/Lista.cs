@@ -106,14 +106,40 @@ namespace ABMLista.Clases
         }
         public string OrdenAlfabetico()
         {
-            Array AZ = lista;
-            Array.Sort(AZ);
-            return AZ.ToString();
-        }
-        public string Listar()
-        {
-            string listar = String.Join("\n", lista);
-            return listar;
+            string salida = "";
+            string[] copia = new string[lista.Length];
+            Copiar(lista, copia);
+            if (copia.Length > 1)
+            {
+                for (int j = 0; j < copia.Length; j++)
+                {
+                    for (int i = 0; i < copia.Length; i++)
+                    {
+                        try
+                        {
+                            if (copia[i].CompareTo(copia[i + 1]) == 1)
+                            {
+                                //El que sigue es mayor
+                                string Temp = copia[i];
+                                copia[i] = copia[i + 1];
+                                copia[i + 1] = Temp;
+
+                            }
+                        }
+                        catch (IndexOutOfRangeException)
+                        {
+                            Console.WriteLine("finalizo la revision de la lista");
+                        }
+                    }
+
+                }
+            }
+            for (int i = 0; i < copia.Length; i++)
+            {
+                salida = salida + copia[i] + "\r\n";
+            }
+
+            return salida;
         }
         #endregion
     }
