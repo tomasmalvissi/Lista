@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.btAgregar = new System.Windows.Forms.Button();
-            this.s = new System.Windows.Forms.TextBox();
+            this.txtAlum = new System.Windows.Forms.TextBox();
             this.lbl = new System.Windows.Forms.Label();
             this.btBuscar = new System.Windows.Forms.Button();
             this.btBorrar = new System.Windows.Forms.Button();
@@ -41,6 +41,8 @@
             this.lblRepues = new System.Windows.Forms.Label();
             this.rbAlfab = new System.Windows.Forms.RadioButton();
             this.rbCarga = new System.Windows.Forms.RadioButton();
+            this.lblNota = new System.Windows.Forms.Label();
+            this.lblON = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btAgregar
@@ -53,19 +55,19 @@
             this.btAgregar.UseVisualStyleBackColor = true;
             this.btAgregar.Click += new System.EventHandler(this.BtAgregar_Click);
             // 
-            // s
+            // txtAlum
             // 
-            this.s.Location = new System.Drawing.Point(128, 27);
-            this.s.Name = "s";
-            this.s.Size = new System.Drawing.Size(272, 20);
-            this.s.TabIndex = 0;
+            this.txtAlum.Location = new System.Drawing.Point(128, 27);
+            this.txtAlum.Name = "txtAlum";
+            this.txtAlum.Size = new System.Drawing.Size(272, 20);
+            this.txtAlum.TabIndex = 0;
             // 
             // lbl
             // 
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl.ForeColor = System.Drawing.Color.White;
-            this.lbl.Location = new System.Drawing.Point(34, 157);
+            this.lbl.Location = new System.Drawing.Point(36, 157);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(0, 15);
             this.lbl.TabIndex = 4;
@@ -134,7 +136,7 @@
             this.lblPorden.AutoSize = true;
             this.lblPorden.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPorden.ForeColor = System.Drawing.Color.White;
-            this.lblPorden.Location = new System.Drawing.Point(200, 157);
+            this.lblPorden.Location = new System.Drawing.Point(234, 157);
             this.lblPorden.Name = "lblPorden";
             this.lblPorden.Size = new System.Drawing.Size(0, 15);
             this.lblPorden.TabIndex = 10;
@@ -144,7 +146,7 @@
             this.lblRepues.AutoSize = true;
             this.lblRepues.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRepues.ForeColor = System.Drawing.Color.White;
-            this.lblRepues.Location = new System.Drawing.Point(128, 109);
+            this.lblRepues.Location = new System.Drawing.Point(129, 113);
             this.lblRepues.Name = "lblRepues";
             this.lblRepues.Size = new System.Drawing.Size(0, 15);
             this.lblRepues.TabIndex = 11;
@@ -173,6 +175,26 @@
             this.rbCarga.Text = "Orden de Carga";
             this.rbCarga.UseVisualStyleBackColor = true;
             // 
+            // lblNota
+            // 
+            this.lblNota.AutoSize = true;
+            this.lblNota.ForeColor = System.Drawing.Color.White;
+            this.lblNota.Location = new System.Drawing.Point(109, 157);
+            this.lblNota.Name = "lblNota";
+            this.lblNota.Size = new System.Drawing.Size(10, 13);
+            this.lblNota.TabIndex = 14;
+            this.lblNota.Text = " ";
+            // 
+            // lblON
+            // 
+            this.lblON.AutoSize = true;
+            this.lblON.ForeColor = System.Drawing.Color.White;
+            this.lblON.Location = new System.Drawing.Point(291, 157);
+            this.lblON.Name = "lblON";
+            this.lblON.Size = new System.Drawing.Size(10, 13);
+            this.lblON.TabIndex = 15;
+            this.lblON.Text = " ";
+            // 
             // frm
             // 
             this.AcceptButton = this.btAgregar;
@@ -180,6 +202,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(569, 351);
+            this.Controls.Add(this.lblON);
+            this.Controls.Add(this.lblNota);
             this.Controls.Add(this.rbCarga);
             this.Controls.Add(this.rbAlfab);
             this.Controls.Add(this.lblRepues);
@@ -191,7 +215,7 @@
             this.Controls.Add(this.btBorrar);
             this.Controls.Add(this.btBuscar);
             this.Controls.Add(this.lbl);
-            this.Controls.Add(this.s);
+            this.Controls.Add(this.txtAlum);
             this.Controls.Add(this.btAgregar);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "frm";
@@ -205,7 +229,7 @@
         #endregion
 
         private System.Windows.Forms.Button btAgregar;
-        private System.Windows.Forms.TextBox s;
+        private System.Windows.Forms.TextBox txtAlum;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.Button btBuscar;
         private System.Windows.Forms.Button btBorrar;
@@ -217,6 +241,8 @@
         private System.Windows.Forms.Label lblRepues;
         private System.Windows.Forms.RadioButton rbAlfab;
         private System.Windows.Forms.RadioButton rbCarga;
+        private System.Windows.Forms.Label lblNota;
+        private System.Windows.Forms.Label lblON;
     }
 }
 

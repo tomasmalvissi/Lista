@@ -29,29 +29,23 @@ namespace ABMLista
         #region EVENTOS
         private void BtAgregar_Click(object sender, EventArgs e)
         {
+            Alumnos.Agregar(txtAlum.Text);
+            lbl.Text = Alumnos.MostrarLista();
 
-            if (Alumnos.Agregar(s.Text))
-            {
-                lbl.Text = Alumnos.MostrarLista();
-                
-            }
-            else
-            {
-                MessageBox.Show("error");
-            }
+            Alumnos.AgregarNota(txtNota.Text);
+            lblNota.Text = Alumnos.MostrarNotas();
 
-
-            s.SelectAll();
-            s.Focus();
+            txtAlum.SelectAll();
+            txtAlum.Focus();
 
         }
 
         private void BtBuscar_Click(object sender, EventArgs e)
         {
-            int Pos = Alumnos.BuscarPosicion(s.Text);
+            int Pos = Alumnos.BuscarPosicion(txtAlum.Text);
             if (Pos == -1)
             {
-                lblRepues.Text = "El alumno " + s.Text + " no se encontró";
+                lblRepues.Text = "El alumno " + txtAlum.Text + " no se encontró";
             }
             else
             {
@@ -61,28 +55,30 @@ namespace ABMLista
 
         private void BtBorrar_Click(object sender, EventArgs e)
         {
-            string Resp = Alumnos.Borrar(s.Text);
+            string Resp = Alumnos.Borrar(txtAlum.Text);
             if (string.IsNullOrEmpty(Resp))
             {
-                Resp = "el alumno " + s.Text + " ha sido borrado";
+                Resp = "el alumno " + txtAlum.Text + " ha sido borrado";
             }
             lblRepues.Text = Resp;
         }
 
-       
+
         private void BtnListar_Click(object sender, EventArgs e)
         {
             if (rbAlfab.Checked == true)
             {
                 lblPorden.Text = Alumnos.OrdenAlfabetico();
+                lblON.Text = "";
 
             }
             else if (rbCarga.Checked == true)
             {
                 lblPorden.Text = Alumnos.MostrarLista();
+                lblON.Text = Alumnos.MostrarNotas();
+                
             }
         }
-
         #endregion
-    }
+    }  
 }
